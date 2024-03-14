@@ -1,9 +1,9 @@
-package com.example
+package com.github.tetrationk.tetrat
 
-import com.example.commands.CommandManager
-import com.example.config.ConfigManager
-import com.example.config.categories.ExampleModConfig
-import com.example.features.ChatFeatures
+import com.github.tetrationk.tetrat.commands.CommandManager
+import com.github.tetrationk.tetrat.config.ConfigManager
+import com.github.tetrationk.tetrat.config.categories.ExampleModConfig
+import com.github.tetrationk.tetrat.features.ChatFeatures
 import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.fml.common.Loader
 import net.minecraftforge.fml.common.Mod
@@ -28,7 +28,7 @@ class ExampleMod {
 
     companion object {
         lateinit var configManager: ConfigManager
-        const val MOD_ID = "examplemod"
+        const val MOD_ID = "tetrat"
 
         @JvmStatic
         val version: String

@@ -1,8 +1,8 @@
-package com.example.commands
+package com.github.tetrationk.tetrat.commands
 
-import com.example.ExampleMod
-import com.example.commands.SimpleCommand.ProcessCommandRunnable
-import com.example.utils.ChatUtils
+import com.github.tetrationk.tetrat.ExampleMod
+import com.github.tetrationk.tetrat.commands.SimpleCommand.ProcessCommandRunnable
+import com.github.tetrationk.tetrat.utils.ChatUtils
 import net.minecraft.command.ICommandSender
 import net.minecraft.util.BlockPos
 import net.minecraftforge.client.ClientCommandHandler

@@ -1,7 +1,7 @@
-package com.example.features
+package com.github.tetrationk.tetrat.features
 
-import com.example.ExampleMod
-import com.example.utils.ChatUtils
+import com.github.tetrationk.tetrat.ExampleMod
+import com.github.tetrationk.tetrat.utils.ChatUtils
 import net.minecraftforge.client.event.ClientChatReceivedEvent
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 
