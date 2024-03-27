@@ -1,46 +1,28 @@
-This template is an example 1.8.9 forge mod written in Kotlin that builds upon
-nea's [template](https://github.com/romangraef/Forge1.8.9Template/tree/kotlin).
-It is written by [SkyHanni](https://github.com/hannibal002/SkyHanni) developers, with the intent to show how easy it is
-to work with [MoulConfig](https://github.com/NotEnoughUpdates/MoulConfig) and other tools.
-![image](https://github.com/hannibal002/Example-1.8.9-Mod/assets/24389977/330485e3-f87b-4d29-8fc6-76abb23dc453)
+# Tet's Rat Mod
+This is a 1.8.9 Hypixel Skyblock mod that helps with rat buffing.
 
-Here is the rest of the original readme from nea:
+### Features
+For now, it just allows you to highlight cheese. There will be more soon!
 
+Use `/rat` to open the config menu.
 
-Architectury Loom based template for 1.8.9 kotlin forge mods
+### Disclaimer
+The use of any mod on Hypixel servers is at your own risk. I am not responsible for any damages that may result from using this mod.
+That being said, this mod is compliant with Hypixel's mod guidelines.
 
-**For other templates, do check out the [other branches of this repository](https://github.com/romangraef/Forge1.8.9Template/branches/all)**
+I should also mention that this mod is not actually a rat. You are free to analyze the source code and build from source if you have any doubts.
 
-To get started, clone this repository.
-In `build.gradle.kts`, replace the values of `baseGroup` and `group` with your own names.
-In `settings.gradle.kts` change `rootProject.name` to your desired mod id.
+### Contributing
+Fork and PR if there's something you want to fix or add. If you need help setting up your environment refer to [Skyhanni's guide](https://github.com/hannibal002/SkyHanni/blob/beta/CONTRIBUTING.md).
 
-The `com.example` package needs to be renamed to match the value of `baseGroup`.
+### License Information
+This mod uses code from the following sources:
 
-If you don't want mixins (which allow for modifying vanilla code), then you can remove the references to mixins from
-the `build.gradle.kts` at the lines specified with comments and the `com.example.mixin` package.
+* Skyhanni
+  * Hannibal002 (Hannibal2) and others
+  * [GNU Lesser General Public License v2.1](https://github.com/hannibal002/SkyHanni/blob/beta/LICENSE)
+* NotEnoughUpdates and MoulConfig
+  * Moulberry, Nea89, and others
+  * [GNU Lesser General Public License v3.0](https://github.com/Moulberry/NotEnoughUpdates/blob/master/COPYING.LESSER)
 
-Please note that Mixins should be kept in their own package, and should exclusively be written in Java, since older versions
-of Mixin don't play well with Kotlin.
-
-This project uses [DevAuth](https://github.com/DJtheRedstoner/DevAuth) per default, so you can log in using your real
-minecraft account. If you don't need that, you can remove it from the buildscript.
-
-To run the mod you will need two JDKs, one Java 17 jdk and one Java 1.8 jdk. You can download those
-from [here](https://adoptium.net/temurin/releases) (or use your own downloads).
-
-When you import your project into IntelliJ, you need to set the gradle jvm to the Java 17 JDK in the gradle tab, and the
-Project SDK to the Java 1.8 JDK. Then click on the sync button in IntelliJ, and it should create a run task
-called `Minecraft Client`. If it doesn't then try relaunching your IntelliJ. **Warning for Mac users**: You might have to remove the `-XStartOnFirstThread` vm argument from your run configuration. In the future, that should be handled by the plugin, but for now you'll probably have to do that manually.
-
-To export your project, run the `gradle build` task, and give other people the
-file `build/libs/<modid>-<version>.jar`. Ignore the jars in the `build/badjars` folder. Those are intermediary jars that
-are used by the build system but *do not work* in a normal forge installation.
-
-### For those who have not an attention span
-
-[![Youtube Tutorial](https://i.ytimg.com/vi/nWzHlomdCgc/maxresdefault.jpg)](https://www.youtube.com/watch?v=nWzHlomdCgc)
-
-## Licensing
-
-This template is licensed under the Unlicense (license copy present in this repository), or alternatively under [Creative Commons 1.0 Universal (CC0 1.0)](https://creativecommons.org/publicdomain/zero/1.0/), and all contributions and PR to this template are expected to follow this. This means your mod, based on this template can be licensed whatever way you want, and does not need to reference back to this template in any way.
+This software is licensed under [GNU Lesser General Public License v3.0](https://github.com/tetrationk/tet-rat/blob/main/COPYING.LESSER).
