@@ -1,7 +1,24 @@
-package com.example.config
+/* Copyright 2024 (C) Tet's Rat Mod Contributors
+ *
+ * This file is part of Tet's Rat Mod.
+ *
+ * Tet's Rat Mod is free software: you can redistribute it
+ * and/or modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation, either
+ * version 3 of the License, or (at your option) any later version.
+ *
+ * Tet's Rat Mod is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with Tet's Rat Mod. If not, see <https://www.gnu.org/licenses/>.
+ */
+package io.github.tetrationk.config
 
-import com.example.config.categories.ExampleModConfig
-import com.example.errors.ConfigError
+import io.github.tetrationk.config.categories.ModConfig
+import io.github.tetrationk.errors.ConfigError
 import com.google.gson.GsonBuilder
 import com.google.gson.TypeAdapter
 import com.google.gson.stream.JsonReader
@@ -48,13 +65,13 @@ class ConfigManager {
             .create()
     }
 
-    private var configDirectory = File("config/examplemod")
+    private var configDirectory = File("config/tetrat")
     private var configFile: File
-    var config: ExampleModConfig? = null
+    var config: ModConfig? = null
     private var lastSaveTime = 0L
 
-    private lateinit var processor: MoulConfigProcessor<ExampleModConfig>
-    private val editor by lazy { MoulConfigEditor(processor) }
+    private lateinit var processor: MoulConfigProcessor<ModConfig>
+    val editor by lazy { MoulConfigEditor(processor) }
 
     init {
         configDirectory.mkdirs()
@@ -67,7 +84,7 @@ class ConfigManager {
 
         if (config == null) {
             println("Creating a clean config.")
-            config = ExampleModConfig()
+            config = ModConfig()
         }
 
         val config = config!!
@@ -99,7 +116,7 @@ class ConfigManager {
                 builder.append(line)
                 builder.append("\n")
             }
-            config = gson.fromJson(builder.toString(), ExampleModConfig::class.java)
+            config = gson.fromJson(builder.toString(), ModConfig::class.java)
         } catch (e: Exception) {
             throw ConfigError("Could not load config", e)
         }
